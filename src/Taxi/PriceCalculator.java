@@ -27,6 +27,6 @@ public class PriceCalculator {
     }
 
     private double ExtraPrice(double distance){
-        return distance <= 2 ? zeroPrice : (distance - baseDistance) * unitPrice;
+        return distance <= 2 ? zeroPrice : (Math.round(distance) - baseDistance) * unitPrice;
     }
 }
